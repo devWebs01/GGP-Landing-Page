@@ -57,19 +57,26 @@
     }
     </script>
 
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
     <!-- Tailwind CSS & Flowbite -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    </noscript>
 
     <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
     <!-- Tailwind Config -->
     <script>
@@ -317,7 +324,7 @@
                     <div class="absolute inset-0 bg-gold-500 transform translate-x-4 translate-y-4 rounded-3xl -z-10">
                     </div>
                     <img src="assets\Sambut Tamu.jpg" alt="Personel Satpam Profesional GGP Siap Melayani dengan Ramah dan Tegas"
-                        class="rounded-3xl shadow-lg w-full h-[500px] object-cover">
+                        class="rounded-3xl shadow-lg w-full h-[500px] object-cover" loading="lazy">
                     <!-- overlay stat -->
                     <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl flex items-center gap-4">
                         <div class="w-14 h-14 bg-navy-800 rounded-full flex items-center justify-center text-gold-500">
