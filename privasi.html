@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebijakan Privasi - PT. Gading Gardatama Perkasa</title>
+    <meta name="description"
+        content="Kebijakan Privasi PT Gading Gardatama Perkasa. Informasi mengenai cara kami mengumpulkan, menggunakan, dan melindungi data pribadi Anda.">
+    <link rel="canonical" href="https://gadinggardatama.co.id/privasi.html">
+
+    <!-- Tailwind CSS & Flowbite -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            500: '#1e293b',
+                            800: '#141f38',
+                            900: '#0f172a'
+                        },
+                        gold: {
+                            400: '#facc15',
+                            500: '#d9a520',
+                            600: '#ca8a04'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"DM Sans"', 'sans-serif'],
+                        heading: ['"Outfit"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Pulse Effect for WA Button */
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(0.8);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                transform: scale(0.8);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        .wa-pulse {
+            animation: pulse-ring 2s infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-navy-800 fixed w-full z-50 top-0 start-0 border-b border-white/10 shadow-lg">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group">
+                <img src="assets/logo.jpeg" alt="Logo Gading Gardatama"
+                    class="w-12 h-12 rounded-full object-cover border-2 border-gold-500/50 group-hover:scale-110 transition-transform shadow-lg shadow-gold-500/20">
+                <span
+                    class="self-center text-xl font-bold whitespace-nowrap text-gold-500 font-heading tracking-wide hidden lg:block">PT.
+                    GADING GARDATAMA PERKASA</span>
+            </a>
+            <div class="flex lg:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <a href="kontak.html"
+                    class="text-navy-900 bg-gold-500 hover:bg-gold-600 focus:ring-4 focus:outline-none focus:ring-gold-400 font-bold rounded-full text-sm px-6 py-2.5 text-center transition-all hover:-translate-y-1 shadow-lg shadow-gold-500/30 hidden sm:block">
+                    Konsultasi Gratis
+                </a>
+                <button data-collapse-toggle="navbar-sticky" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg lg:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
+                    aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-700 rounded-lg bg-navy-800 lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 lg:bg-transparent">
+                    <li>
+                        <a href="index.html"
+                            class="block py-2 px-3 text-gray-300 rounded hover:bg-navy-700 lg:hover:bg-transparent lg:hover:text-gold-500 lg:p-0 transition-colors">Beranda</a>
+                    </li>
+                    <li>
+                        <a href="layanan.html"
+                            class="block py-2 px-3 text-gray-300 rounded hover:bg-navy-700 lg:hover:bg-transparent lg:hover:text-gold-500 lg:p-0 transition-colors">Layanan</a>
+                    </li>
+                    <li>
+                        <a href="tentang.html"
+                            class="block py-2 px-3 text-gray-300 rounded hover:bg-navy-700 lg:hover:bg-transparent lg:hover:text-gold-500 lg:p-0 transition-colors">Tentang
+                            Kami</a>
+                    </li>
+                    <li>
+                        <a href="kontak.html"
+                            class="block py-2 px-3 text-gray-300 rounded hover:bg-navy-700 lg:hover:bg-transparent lg:hover:text-gold-500 lg:p-0 transition-colors">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header (Hero Mini) -->
+    <div class="pt-32 pb-16 bg-navy-900 border-b border-navy-700 relative overflow-hidden">
+        <!-- Background Decor -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/Patroli Malam.png" alt="Aktivitas Patroli Keamanan GGP"
+                class="w-full h-full object-cover opacity-20 mix-blend-overlay object-center">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-screen-xl px-4 mx-auto text-center mt-8">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight font-heading">
+                Kebijakan <span class="text-gold-500">Privasi</span>
+            </h1>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Komitmen kami dalam melindungi data dan informasi pribadi Anda.
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow py-20">
+        <div class="max-w-screen-md px-4 mx-auto">
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100">
+                <article class="prose prose-slate max-w-none">
+                    <h2 class="text-2xl font-bold text-navy-900 mb-6 font-heading">1. Pendahuluan</h2>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        PT. Gading Gardatama Perkasa berkomitmen untuk melindungi dan menghormati privasi Anda. Kebijakan ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi yang Anda berikan melalui website kami.
+                    </p>
+
+                    <h2 class="text-2xl font-bold text-navy-900 mb-6 font-heading">2. Informasi yang Kami Kumpulkan</h2>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Kami mengumpulkan informasi pribadi yang Anda berikan secara sukarela saat menggunakan formulir kontak kami, termasuk:
+                    </p>
+                    <ul class="list-disc pl-6 text-gray-600 space-y-2 mb-8">
+                        <li>Nama lengkap</li>
+                        <li>Informasi kontak (Nomor telepon, email)</li>
+                        <li>Nama perusahaan/organisasi</li>
+                        <li>Detail pesan atau kebutuhan keamanan Anda</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-bold text-navy-900 mb-6 font-heading">3. Penggunaan Informasi</h2>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Informasi yang kami kumpulkan digunakan semata-mata untuk:
+                    </p>
+                    <ul class="list-disc pl-6 text-gray-600 space-y-2 mb-8">
+                        <li>Menanggapi pertanyaan atau permintaan penawaran Anda.</li>
+                        <li>Memberikan layanan keamanan yang Anda butuhkan.</li>
+                        <li>Keperluan administrasi internal dan peningkatan layanan.</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-bold text-navy-900 mb-6 font-heading">4. Keamanan Data</h2>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        Kami menerapkan langkah-langkah keamanan teknis dan organisasi yang sesuai untuk melindungi data pribadi Anda dari akses yang tidak sah, pengungkapan, perubahan, atau penghancuran.
+                    </p>
+
+                    <h2 class="text-2xl font-bold text-navy-900 mb-6 font-heading">5. Pemberian Data kepada Pihak Ketiga</h2>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        Kami tidak akan menjual, menyewakan, atau memberikan informasi pribadi Anda kepada pihak ketiga untuk tujuan pemasaran tanpa izin eksplisit dari Anda, kecuali diwajibkan oleh hukum yang berlaku.
+                    </p>
+
+                    <h2 class="text-2xl font-bold text-navy-900 mb-6 font-heading">6. Perubahan Kebijakan</h2>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        Kebijakan privasi ini dapat kami perbarui sewaktu-waktu. Setiap perubahan akan segera dipublikasikan di halaman ini.
+                    </p>
+
+                    <h2 class="text-2xl font-bold text-navy-900 mb-6 font-heading">7. Kontak</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        Jika Anda memiliki pertanyaan mengenai kebijakan privasi ini, silakan hubungi kami melalui <a href="kontak.html" class="text-gold-600 font-bold hover:underline">halaman kontak</a> atau email ke info@gadinggardatama.co.id.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 pt-16 pb-8 mt-auto">
+        <div class="max-w-screen-xl px-4 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Col 1 -->
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="flex items-center space-x-3 mb-6 group">
+                        <img src="assets/logo.jpeg" alt="Logo Gading Gardatama"
+                            class="w-12 h-12 rounded-full object-cover border-2 border-gold-500/50 group-hover:scale-110 transition-transform shadow-lg shadow-gold-500/20">
+                        <span class="text-lg font-bold text-white font-heading">PT. GADING GARDATAMA PERKASA</span>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        Perusahaan jasa pengamanan terdepan yang berkomitmen menjaga aset berharga, karyawan, dan klien
+                        Anda dengan sepenuh hati dan dedikasi 24 jam sehari.
+                    </p>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 font-heading uppercase tracking-wider text-sm">Tautan Cepat</h4>
+                    <ul class="text-gray-400 text-sm space-y-4">
+                        <li><a href="index.html" class="hover:text-gold-500 transition-colors">Beranda</a></li>
+                        <li><a href="tentang.html" class="hover:text-gold-500 transition-colors">Tentang Kami</a></li>
+                        <li><a href="layanan.html" class="hover:text-gold-500 transition-colors">Layanan Keamanan</a></li>
+                        <li><a href="index.html#faq" class="hover:text-gold-500 transition-colors">FAQ & Bantuan</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 font-heading uppercase tracking-wider text-sm">Layanan Utama</h4>
+                    <ul class="text-gray-400 text-sm space-y-4">
+                        <li><a href="layanan.html#sec-tenaga" class="hover:text-gold-500 transition-colors">Penyedia Tenaga Keamanan</a></li>
+                        <li><a href="layanan.html#sec-peralatan" class="hover:text-gold-500 transition-colors">Penerapan Peralatan Keamanan</a></li>
+                        <li><a href="layanan.html#sec-event" class="hover:text-gold-500 transition-colors">Event Security</a></li>
+                        <li><a href="layanan.html#sec-pabrik" class="hover:text-gold-500 transition-colors">Security Pabrik</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 font-heading uppercase tracking-wider text-sm">Kontak Darurat</h4>
+                    <ul class="text-gray-400 text-sm space-y-5">
+                        <li class="flex items-start">
+                            <i class="ph-fill ph-map-pin text-gold-500 text-xl mt-0.5 mr-3 shrink-0"></i>
+                            <span class="leading-relaxed">RT 05, RW 02, Ds. Pulai Gading, Kec. Bayung Lencir, Kab. Musi Banyuasin, Sumatera Selatan</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ph-fill ph-phone text-gold-500 text-xl mr-3 shrink-0"></i>
+                            <span>+6282114725042</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ph-fill ph-envelope-simple text-gold-500 text-xl mr-3 shrink-0"></i>
+                            <span>info@gadinggardatama.co.id</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-navy-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; <span id="year"></span> PT. Gading Gardatama Perkasa. All Rights Reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="privasi.html" class="hover:text-white transition-colors">Kebijakan Privasi</a>
+                    <a href="syarat.html" class="hover:text-white transition-colors">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6282114725042" target="_blank"
+        class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_10px_rgba(0,0,0,0.3)] hover:scale-110 transition-transform wa-pulse group"
+        aria-label="Chat via WhatsApp">
+        <i class="ph-fill ph-whatsapp-logo"></i>
+        <span class="absolute -top-12 right-0 bg-navy-900 text-white text-xs font-bold px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-lg">
+            Hubungi Kami Sekarang!
+        </span>
+    </a>
+
+    <!-- Flowbite JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const navbar = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('bg-navy-900', 'shadow-xl');
+                navbar.classList.remove('bg-navy-800');
+            } else {
+                navbar.classList.remove('bg-navy-900', 'shadow-xl');
+                navbar.classList.add('bg-navy-800');
+            }
+        });
+    </script>
+</body>
+
+</html>
