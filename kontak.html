@@ -249,20 +249,21 @@
                             <p class="text-gray-500 text-sm mb-8">Isi formulir di bawah ini dengan lengkap, tim kami
                                 akan merespons dalam waktu 1x24 jam kerja.</p>
 
-                            <form id="contactForm" class="space-y-6">
+                            <form action="https://docs.google.com/forms/d/e/1FAIpQLSeW2Mh1YwSVljSEeOAf7-Oxd0nTf9ehRX_-j4F37RczKblQcQ/formResponse"
+                                target="_self" id="bootstrapForm" method="POST" class="space-y-6">
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div>
                                         <label for="first_name"
                                             class="block mb-2 text-sm font-medium text-navy-900">Nama Depan <span
                                                 class="text-red-500">*</span></label>
-                                        <input type="text" id="first_name"
+                                        <input type="text" id="first_name" name="entry.305284360"
                                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-gold-500 focus:border-gold-500 block w-full p-3.5 transition-colors"
                                             placeholder="Budi" required>
                                     </div>
                                     <div>
                                         <label for="last_name" class="block mb-2 text-sm font-medium text-navy-900">Nama
                                             Belakang</label>
-                                        <input type="text" id="last_name"
+                                        <input type="text" id="last_name" name="entry.665436794"
                                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-gold-500 focus:border-gold-500 block w-full p-3.5 transition-colors"
                                             placeholder="Santoso">
                                     </div>
@@ -272,14 +273,14 @@
                                     <div>
                                         <label for="company" class="block mb-2 text-sm font-medium text-navy-900">Nama
                                             Perusahaan / Instansi</label>
-                                        <input type="text" id="company"
+                                        <input type="text" id="company" name="entry.843348897"
                                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-gold-500 focus:border-gold-500 block w-full p-3.5 transition-colors"
                                             placeholder="PT... atau CV...">
                                     </div>
                                     <div>
                                         <label for="phone" class="block mb-2 text-sm font-medium text-navy-900">Nomor
                                             Telepon / WA <span class="text-red-500">*</span></label>
-                                        <input type="tel" id="phone"
+                                        <input type="tel" id="phone" name="entry.1989917321"
                                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-gold-500 focus:border-gold-500 block w-full p-3.5 transition-colors"
                                             placeholder="0812..." required>
                                     </div>
@@ -288,7 +289,7 @@
                                 <div>
                                     <label for="email" class="block mb-2 text-sm font-medium text-navy-900">Alamat Email
                                         <span class="text-red-500">*</span></label>
-                                    <input type="email" id="email"
+                                    <input type="email" id="email" name="entry.483983644"
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-gold-500 focus:border-gold-500 block w-full p-3.5 transition-colors"
                                         placeholder="email@perusahaan.com" required>
                                 </div>
@@ -297,25 +298,29 @@
                                     <label for="service_interest"
                                         class="block mb-2 text-sm font-medium text-navy-900">Layanan yang
                                         Diminati</label>
-                                    <select id="service_interest"
+                                    <select id="service_interest" name="entry.492055816"
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-gold-500 focus:border-gold-500 block w-full p-3.5 transition-colors">
                                         <option value="" selected disabled>Pilih layanan...</option>
-                                        <option value="guarding">Penyediaan Tenaga Keamanan (Satpam)</option>
-                                        <option value="equipment">Peralatan Keamanan (CCTV/Alarm)</option>
-                                        <option value="event">Event Security</option>
-                                        <option value="factory">Security Pabrik</option>
-                                        <option value="other">Konsultasi / Lainnya</option>
+                                        <option value="Penyediaan Tenaga Keamaan (Satpam)">Penyediaan Tenaga Keamaan (Satpam)</option>
+                                        <option value="Peralatan Keamanan (CCTV)">Peralatan Keamanan (CCTV)</option>
+                                        <option value="Security Objek Vital">Security Objek Vital</option>
+                                        <option value="Security Pabrik">Security Pabrik</option>
+                                        <option value="__other_option__">Lainnya...</option>
                                     </select>
                                 </div>
 
                                 <div>
                                     <label for="message" class="block mb-2 text-sm font-medium text-navy-900">Pesan /
                                         Detail Kebutuhan <span class="text-red-500">*</span></label>
-                                    <textarea id="message" rows="5"
+                                    <textarea id="message" name="entry.1026245525" rows="5"
                                         class="block p-3.5 w-full text-sm text-gray-900 bg-gray-50 rounded-xl border border-gray-300 focus:ring-gold-500 focus:border-gold-500 transition-colors"
                                         placeholder="Deskripsikan secara singkat kebutuhan keamanan Anda atau lokasi yang ingin diamankan..."
                                         required></textarea>
                                 </div>
+
+                                <input type="hidden" name="fvv" value="1">
+                                <input type="hidden" name="fbzx" value="3097778688337905302">
+                                <input type="hidden" name="pageHistory" value="0">
 
                                 <button type="submit"
                                     class="w-full text-navy-900 bg-gold-500 hover:bg-gold-600 focus:ring-4 focus:outline-none focus:ring-gold-400 font-bold rounded-xl text-base px-6 py-4 text-center transition-all hover:-translate-y-1 shadow-lg shadow-gold-500/30 flex justify-center items-center">
@@ -453,6 +458,12 @@
         </span>
     </a>
 
+    <!-- jQuery and Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"
+        integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+
     <!-- Flowbite JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script>
@@ -471,47 +482,26 @@
             }
         });
 
-        // WhatsApp Form Submit Handler
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function (e) {
-                e.preventDefault();
+        // Google Form AJAX Submission
+        $('#bootstrapForm').submit(function (event) {
+            event.preventDefault();
+            const $form = $(this);
+            const $submitBtn = $form.find('button[type="submit"]');
+            const originalBtnText = $submitBtn.html();
 
-                const firstName = document.getElementById('first_name').value.trim();
-                const lastName = document.getElementById('last_name').value.trim();
-                const company = document.getElementById('company').value.trim() || '-';
-                const phone = document.getElementById('phone').value.trim();
-                const email = document.getElementById('email').value.trim();
-                const serviceSelect = document.getElementById('service_interest');
+            // Loading state
+            $submitBtn.prop('disabled', true).html('<i class="ph-bold ph-circle-notch animate-spin mr-2 text-xl"></i> Mengirim...');
 
-                let service = '-';
-                if (serviceSelect.selectedIndex > 0) {
-                    service = serviceSelect.options[serviceSelect.selectedIndex].text;
+            $form.ajaxSubmit({
+                dataType: 'jsonp',
+                error: function () {
+                    // Success handling for Google Forms (since it doesnt support JSONP, error is success)
+                    alert('Terima kasih! Pesan Anda telah kami terima dan tim kami akan segera menghubungi Anda.');
+                    $form[0].reset();
+                    $submitBtn.prop('disabled', false).html(originalBtnText);
                 }
-
-                const message = document.getElementById('message').value.trim();
-
-                // Build WhatsApp message
-                let waText = `Halo PT Gading Gardatama Perkasa,%0A%0A`;
-                waText += `Saya ingin berdiskusi mengenai layanan keamanan.%0A%0A`;
-                waText += `*Detail Kontak:*%0A`;
-                waText += `- Nama: ${firstName} ${lastName}%0A`;
-                waText += `- Perusahaan/Instansi: ${company}%0A`;
-                waText += `- No. Telepon/WA: ${phone}%0A`;
-                waText += `- Email: ${email}%0A%0A`;
-                waText += `*Layanan yang Diminati:*%0A${service}%0A%0A`;
-                waText += `*Pesan/Kebutuhan:*%0A${message}`;
-
-                // Target Phone Number (Update if necessary)
-                const waNumber = "6281234567890";
-
-                // Create Wa.me Link
-                const waUrl = `https://wa.me/${waNumber}?text=${waText}`;
-
-                // Open WhatsApp in new tab
-                window.open(waUrl, '_blank');
             });
-        }
+        });
     </script>
 </body>
 
