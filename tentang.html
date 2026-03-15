@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - PT. Gading Gardatama Perkasa</title>
+
+    <!-- Tailwind CSS & Flowbite -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            500: '#1e293b',
+                            800: '#141f38',
+                            900: '#0f172a'
+                        },
+                        gold: {
+                            400: '#facc15',
+                            500: '#d9a520',
+                            600: '#ca8a04'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"DM Sans"', 'sans-serif'],
+                        heading: ['"Outfit"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Pulse Effect for WA Button */
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(0.8);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                transform: scale(0.8);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        .wa-pulse {
+            animation: pulse-ring 2s infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-navy-800 fixed w-full z-50 top-0 start-0 border-b border-white/10 shadow-lg">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group">
+                <img src="assets/logo.jpeg" alt="Logo Gading Gardatama"
+                    class="w-12 h-12 rounded-full object-cover border-2 border-gold-500/50 group-hover:scale-110 transition-transform shadow-lg shadow-gold-500/20">
+                <span
+                    class="self-center text-xl font-bold whitespace-nowrap text-gold-500 font-heading tracking-wide">PT.
+                    GADING GARDATAMA PERKASA</span>
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <a href="kontak.html"
+                    class="text-navy-900 bg-gold-500 hover:bg-gold-600 focus:ring-4 focus:outline-none focus:ring-gold-400 font-bold rounded-full text-sm px-6 py-2.5 text-center transition-all hover:-translate-y-1 shadow-lg shadow-gold-500/30 hidden sm:block">
+                    Konsultasi Gratis
+                </a>
+                <button data-collapse-toggle="navbar-sticky" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
+                    aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-700 rounded-lg bg-navy-800 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+                    <li>
+                        <a href="index.html"
+                            class="block py-2 px-3 text-gray-300 rounded hover:bg-navy-700 md:hover:bg-transparent md:hover:text-gold-500 md:p-0 transition-colors">Beranda</a>
+                    </li>
+                    <li>
+                        <a href="layanan.html"
+                            class="block py-2 px-3 text-gray-300 rounded hover:bg-navy-700 md:hover:bg-transparent md:hover:text-gold-500 md:p-0 transition-colors">Layanan</a>
+                    </li>
+                    <li>
+                        <a href="tentang.html"
+                            class="block py-2 px-3 text-gold-500 bg-navy-900 rounded md:bg-transparent md:text-gold-500 md:p-0 md:border-b-2 md:border-gold-500"
+                            aria-current="page">Tentang Kami</a>
+                    </li>
+                    <li>
+                        <a href="kontak.html"
+                            class="block py-2 px-3 text-gray-300 rounded hover:bg-navy-700 md:hover:bg-transparent md:hover:text-gold-500 md:p-0 transition-colors">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header (Hero Mini) -->
+    <div class="pt-32 pb-16 bg-navy-900 border-b border-navy-700 relative overflow-hidden">
+        <!-- Background Decor -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1555848962-6e79363ec58f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+                alt="About Us Background" class="w-full h-full object-cover opacity-20 mix-blend-overlay object-center">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-900 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-screen-xl px-4 mx-auto text-center mt-8">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight font-heading">
+                Mengenal <span class="text-gold-500">Lebih Dekat</span>
+            </h1>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Kami hadir dengan komitmen teguh untuk melindungi aset, operasional, dan sumber daya manusia Anda
+                melalui layanan keamanan yang teruji dan terpercaya.
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Content wrapper -->
+    <main class="flex-grow pt-10 pb-20">
+
+        <!-- Company Profile Detail -->
+        <section class="py-16 bg-slate-50">
+            <div class="max-w-screen-xl px-4 mx-auto grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Text Content -->
+                <div>
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold-500/30 bg-gold-500/10 text-gold-600 mb-6 font-semibold shadow-sm">
+                        <i class="ph-fill ph-buildings"></i>
+                        <span class="text-sm">Profil Perusahaan</span>
+                    </div>
+                    <h2
+                        class="mb-6 text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl font-heading leading-tight">
+                        Mitra Strategis Penyedia Keamanan Terdepan di Indonesia
+                    </h2>
+                    <p class="mb-6 text-gray-600 text-lg leading-relaxed">
+                        PT. Gading Gardatama Perkasa didirikan dengan landasan kuat untuk memberikan solusi keamanan
+                        yang inovatif, responsif, dan adaptabel. Kami menyadari bahwa setiap industri menghadapi
+                        tantangan keamanan (security pain points) yang berbeda, sehingga kami merancang sistem
+                        perlindungan yang dipersonalisasi.
+                    </p>
+                    <p class="mb-8 text-gray-600 text-lg leading-relaxed">
+                        Kami dikelola oleh jajaran manajemen profesional dari latar belakang militer, kepolisian, dan
+                        pakar keamanan sipil. Hal ini memastikan setiap SOP, rekrutmen satpam, dan instalasi sistem
+                        berada di bawah kendali mutu (quality control) berstandar nasional dan internasional.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-6 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                        <div>
+                            <div class="flex items-center gap-3 text-navy-900 mb-2">
+                                <i class="ph-fill ph-target text-gold-500 text-2xl"></i>
+                                <h3 class="font-bold font-heading text-lg">Visi Kami</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Menjadi perusahaan penyedia layanan keamanan swasta
+                                nasional yang paling diandalkan dan profesional dengan jangkauan seluruh Indonesia.</p>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-3 text-navy-900 mb-2">
+                                <i class="ph-fill ph-rocket-launch text-gold-500 text-2xl"></i>
+                                <h3 class="font-bold font-heading text-lg">Misi Kami</h3>
+                            </div>
+                            <ul class="text-gray-600 text-sm list-disc pl-4 space-y-1">
+                                <li>Peningkatan kualitas SDM berkelanjutan.</li>
+                                <li>Penerapan teknologi tepat guna.</li>
+                                <li>Pelayanan unggul berbasis kepuasan klien.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Grid -->
+                <div class="grid grid-cols-2 gap-4">
+                    <img class="w-full rounded-2xl h-64 object-cover shadow-lg border-2 border-white hover:scale-105 transition-transform duration-500"
+                        src="https://images.unsplash.com/photo-1541888069614-762bc2b56434?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Security professional">
+                    <img class="w-full rounded-2xl h-64 object-cover shadow-lg border-2 border-white hover:scale-105 transition-transform duration-500 mt-8"
+                        src="https://images.unsplash.com/photo-1555848962-6e79363ec58f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Corporate building monitoring">
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="py-16 bg-navy-900 text-white relative">
+            <div class="max-w-screen-xl px-4 mx-auto">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-gold-500 font-bold tracking-widest uppercase text-sm mb-2">Nilai Inti (Core Values)
+                    </h2>
+                    <h3 class="text-3xl font-extrabold font-heading">Fondasi Budaya Kerja Kami</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div
+                        class="bg-navy-800 p-8 rounded-2xl border border-navy-700 hover:border-gold-500/50 transition-colors group">
+                        <div
+                            class="w-16 h-16 bg-navy-900 rounded-full flex items-center justify-center text-gold-500 mb-6 shadow-inner group-hover:scale-110 transition-transform">
+                            <i class="ph-fill ph-handshake text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 font-heading">Integritas</h4>
+                        <p class="text-gray-400 text-sm">Menjunjung tinggi kejujuran, kode etik, dan prinsip kebenaran
+                            (Tangguh).</p>
+                    </div>
+
+                    <div
+                        class="bg-navy-800 p-8 rounded-2xl border border-navy-700 hover:border-gold-500/50 transition-colors group">
+                        <div
+                            class="w-16 h-16 bg-navy-900 rounded-full flex items-center justify-center text-gold-500 mb-6 shadow-inner group-hover:scale-110 transition-transform">
+                            <i class="ph-fill ph-medal text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 font-heading">Profesional</h4>
+                        <p class="text-gray-400 text-sm">Bekerja tuntas, akurat, dan sesuai SOP terstandarisasi industri
+                            pengamanan.</p>
+                    </div>
+
+                    <div
+                        class="bg-navy-800 p-8 rounded-2xl border border-navy-700 hover:border-gold-500/50 transition-colors group">
+                        <div
+                            class="w-16 h-16 bg-navy-900 rounded-full flex items-center justify-center text-gold-500 mb-6 shadow-inner group-hover:scale-110 transition-transform">
+                            <i class="ph-fill ph-shield-check text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 font-heading">Responsif</h4>
+                        <p class="text-gray-400 text-sm">Siap sedia menanggapi situasi darurat, ancaman, maupun
+                            permintaan klien dengan cepat.</p>
+                    </div>
+
+                    <div
+                        class="bg-navy-800 p-8 rounded-2xl border border-navy-700 hover:border-gold-500/50 transition-colors group">
+                        <div
+                            class="w-16 h-16 bg-navy-900 rounded-full flex items-center justify-center text-gold-500 mb-6 shadow-inner group-hover:scale-110 transition-transform">
+                            <i class="ph-fill ph-users-three text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 font-heading">Hospitality</h4>
+                        <p class="text-gray-400 text-sm">Satpam tidak hanya garang, tapi harus ramah dan melayani
+                            sebagai wajah depan perusahaan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeri Operasional / Trust Building Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-screen-xl px-4 mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-200 pb-6">
+                    <div class="max-w-xl">
+                        <h2 class="text-gold-500 font-bold tracking-widest uppercase text-sm mb-2">Portfolio Kegiatan
+                        </h2>
+                        <h3 class="text-3xl font-extrabold tracking-tight text-navy-900 font-heading">Galeri Operasional
+                            Lapangan</h3>
+                        <p class="text-gray-600 mt-4 text-lg">Bukti nyata dedikasi dan profesionalitas tim keamanan kami
+                            dalam menjalankan tugas pengamanan dan pengawalan VIP sehari-hari.</p>
+                    </div>
+                </div>
+
+                <!-- Masonry Gallery Layout -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <!-- Item 1 - Tall -->
+                    <div
+                        class="md:row-span-2 relative group overflow-hidden rounded-2xl shadow-md border border-gray-100">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 min-h-[300px] md:min-h-0"
+                            src="https://images.unsplash.com/photo-1563214589-4b6797587132?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Penjagaan Eksekutif">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-navy-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h4 class="text-white font-bold text-lg font-heading">Pengawalan VIP</h4>
+                            <p class="text-gray-300 text-sm hidden sm:block">Protokol penjagaan VVIP bersenjata lengkap.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-md border border-gray-100">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 min-h-[200px]"
+                            src="https://images.unsplash.com/photo-1541888069614-762bc2b56434?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Serah Terima Tugas Satpam">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-navy-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h4 class="text-white font-bold text-lg font-heading">Apel Persiapan</h4>
+                            <p class="text-gray-300 text-sm hidden sm:block">Briefing serah terima tugas penjagaan area.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-md border border-gray-100">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 min-h-[200px]"
+                            src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Pemantauan CCTV Command Center">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-navy-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h4 class="text-white font-bold text-lg font-heading">Command Center</h4>
+                            <p class="text-gray-300 text-sm hidden sm:block">Pemantauan CCTV terpusat 24/7 untuk objek
+                                vital.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 - Wide -->
+                    <div
+                        class="md:col-span-2 relative group overflow-hidden rounded-2xl shadow-md border border-gray-100">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 min-h-[250px]"
+                            src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                            alt="Patroli Malam Pabrik Industri">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-navy-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h4 class="text-white font-bold text-lg font-heading">Patroli Kawasan Industri</h4>
+                            <p class="text-gray-300 text-sm">Pengecekan area perimeter manufaktur di malam hari.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-navy-900 pt-16 pb-8 border-t border-navy-800 mt-auto">
+        <div class="max-w-screen-xl px-4 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Col 1 -->
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="flex items-center space-x-3 mb-6 group">
+                        <img src="assets/logo.jpeg" alt="Logo Gading Gardatama"
+                            class="w-12 h-12 rounded-full object-cover border-2 border-gold-500/50 group-hover:scale-110 transition-transform shadow-lg shadow-gold-500/20">
+                        <span class="text-lg font-bold text-white font-heading">PT. GADING GARDATAMA PERKASA</span>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        Perusahaan jasa pengamanan terdepan yang berkomitmen menjaga aset berharga, karyawan, dan klien
+                        Anda dengan sepenuh hati dan dedikasi 24 jam sehari.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="text-gray-400 hover:text-white transition-colors bg-navy-800 p-2 rounded-full"><i
+                                class="ph-fill ph-facebook-logo text-xl"></i></a>
+                        <a href="#"
+                            class="text-gray-400 hover:text-white transition-colors bg-navy-800 p-2 rounded-full"><i
+                                class="ph-fill ph-instagram-logo text-xl"></i></a>
+                        <a href="#"
+                            class="text-gray-400 hover:text-white transition-colors bg-navy-800 p-2 rounded-full"><i
+                                class="ph-fill ph-linkedin-logo text-xl"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 font-heading uppercase tracking-wider text-sm">Tautan Cepat
+                    </h4>
+                    <ul class="text-gray-400 text-sm space-y-4">
+                        <li><a href="index.html" class="hover:text-gold-500 transition-colors">Beranda</a></li>
+                        <li><a href="tentang.html" class="hover:text-gold-500 transition-colors">Tentang Kami</a></li>
+                        <li><a href="layanan.html" class="hover:text-gold-500 transition-colors">Layanan Keamanan</a>
+                        </li>
+                        <li><a href="index.html#faq" class="hover:text-gold-500 transition-colors">FAQ & Bantuan</a>
+                        </li>
+                        <li><a href="#" class="hover:text-gold-500 transition-colors">Karir Satpam</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 font-heading uppercase tracking-wider text-sm">Layanan Utama
+                    </h4>
+                    <ul class="text-gray-400 text-sm space-y-4">
+                        <li><a href="layanan.html" class="hover:text-gold-500 transition-colors">Penjagaan Fisik
+                                Satpam</a></li>
+                        <li><a href="layanan.html" class="hover:text-gold-500 transition-colors">Patroli Keamanan
+                                Area</a></li>
+                        <li><a href="layanan.html" class="hover:text-gold-500 transition-colors">Instalasi Kamera CCTV &
+                                Akses</a></li>
+                        <li><a href="layanan.html" class="hover:text-gold-500 transition-colors">Investigasi Internal
+                                Bisnis</a></li>
+                        <li><a href="layanan.html" class="hover:text-gold-500 transition-colors">Pengawalan Uang
+                                (CIT)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 font-heading uppercase tracking-wider text-sm">Kontak Darurat
+                    </h4>
+                    <ul class="text-gray-400 text-sm space-y-5">
+                        <li class="flex items-start">
+                            <i class="ph-fill ph-map-pin text-gold-500 text-xl mt-0.5 mr-3 shrink-0"></i>
+                            <span class="leading-relaxed">Jl. Kebayoran Lama No. 99, Gedung Perkantoran Melati Lt 2,
+                                Jakarta Selatan, 12210</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ph-fill ph-phone text-gold-500 text-xl mr-3 shrink-0"></i>
+                            <span>(021) 555-0198 (24 Jam)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ph-fill ph-envelope-simple text-gold-500 text-xl mr-3 shrink-0"></i>
+                            <span>info@gadinggardatama.co.id</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-navy-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; <span id="year"></span> PT. Gading Gardatama Perkasa. All Rights Reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Kebijakan Privasi</a>
+                    <a href="#" class="hover:text-white transition-colors">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281234567890" target="_blank"
+        class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_10px_rgba(0,0,0,0.3)] hover:scale-110 transition-transform wa-pulse group"
+        aria-label="Chat via WhatsApp">
+        <i class="ph-fill ph-whatsapp-logo"></i>
+        <!-- Tooltip -->
+        <span
+            class="absolute -top-12 right-0 bg-navy-900 text-white text-xs font-bold px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-lg">
+            Hubungi Kami Sekarang!
+        </span>
+    </a>
+
+    <!-- Flowbite JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script>
+        // Update copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Add scroll logic for navbar background
+        const navbar = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('bg-navy-900', 'shadow-xl');
+                navbar.classList.remove('bg-navy-800');
+            } else {
+                navbar.classList.remove('bg-navy-900', 'shadow-xl');
+                navbar.classList.add('bg-navy-800');
+            }
+        });
+    </script>
+</body>
+
+</html>

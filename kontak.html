@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami - PT. Gading Gardatama Perkasa</title>
+
+    <!-- Tailwind CSS & Flowbite -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            500: '#1e293b',
+                            800: '#141f38',
+                            900: '#0f172a'
+                        },
+                        gold: {
+                            400: '#facc15',
+                            500: '#d9a520',
+                            600: '#ca8a04'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"DM Sans"', 'sans-serif'],
+                        heading: ['"Outfit"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Pulse Effect for WA Button */
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(0.8);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                transform: scale(0.8);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        .wa-pulse {
+            animation: pulse-ring 2s infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-navy-800 fixed w-full z-50 top-0 start-0 border-b border-white/10 shadow-lg">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group">
+                <img src="assets/logo.jpeg" alt="Logo Gading Gardatama"
+                    class="w-12 h-12 rounded-full object-cover border-2 border-gold-500/50 group-hover:scale-110 transition-transform shadow-lg shadow-gold-500/20">
+                <span
+                    class="self-center text-xl font-bold whitespace-nowrap text-gold-500 font-heading tracking-wide">PT.
+                    GADING GARDATAMA PERKASA</span>
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <a href="#formulir"
+                    class="text-navy-900 bg-gold-500 hover:bg-gold-600 focus:ring-4 focus:outline-none focus:ring-gold-400 font-bold rounded-full text-sm px-6 py-2.5 text-center transition-all hover:-translate-y-1 shadow-lg shadow-gold-500/30 hidden sm:block">
+                    Kirim Pesan
+                </a>
+                <button data-collapse-toggle="navbar-sticky" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
+                    aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-700 rounded-lg bg-navy-800 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+                    <li>
+                        <a href="index.html"
+                            class="block py-2 px-3 text-gray-300 rounded hover:bg-navy-700 md:hover:bg-transparent md:hover:text-gold-500 md:p-0 transition-colors">Beranda</a>
+                    </li>
+                    <li>
+                        <a href="layanan.html"
+                            class="block py-2 px-3 text-gray-300 rounded hover:bg-navy-700 md:hover:bg-transparent md:hover:text-gold-500 md:p-0 transition-colors">Layanan</a>
+                    </li>
+                    <li>
+                        <a href="tentang.html"
+                            class="block py-2 px-3 text-gray-300 rounded hover:bg-navy-700 md:hover:bg-transparent md:hover:text-gold-500 md:p-0 transition-colors">Tentang
+                            Kami</a>
+                    </li>
+                    <li>
+                        <a href="kontak.html"
+                            class="block py-2 px-3 text-gold-500 bg-navy-900 rounded md:bg-transparent md:text-gold-500 md:p-0 md:border-b-2 md:border-gold-500"
+                            aria-current="page">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header (Hero Mini) -->
+    <div class="pt-32 pb-16 bg-navy-900 border-b border-navy-700 relative overflow-hidden">
+        <!-- Background Decor -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="relative z-10 max-w-screen-xl px-4 mx-auto text-center mt-8">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight font-heading">
+                Hubungi <span class="text-gold-500">Kami</span>
+            </h1>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Kami siap mendengarkan dan memberikan solusi terbaik untuk kebutuhan keamanan bisnis Anda. Tim konsultan
+                kami akan merespons secepat mungkin.
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Content wrapper -->
+    <main class="flex-grow pt-10 pb-20">
+
+        <!-- Contact Information & Form Section -->
+        <section class="py-12 bg-slate-50" id="formulir">
+            <div class="max-w-screen-xl px-4 mx-auto">
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+                    <!-- Contact Information Details -->
+                    <div class="lg:col-span-5 space-y-8">
+                        <div>
+                            <h2 class="text-3xl font-extrabold text-navy-900 font-heading mb-6 tracking-tight">Mari
+                                Berdiskusi Mengenai <span
+                                    class="text-gold-600 border-b-4 border-gold-500/30 pb-1">Keamanan</span> Anda</h2>
+                            <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                                Jangan ragu untuk menghubungi kami untuk konsultasi gratis, permintaan survei lokasi,
+                                atau sekadar bertanya mengenai layanan kami. Anda juga dapat mengunjungi kantor pusat
+                                kami pada jam operasional.
+                            </p>
+                        </div>
+
+                        <div class="space-y-6">
+                            <!-- Address -->
+                            <div
+                                class="flex items-start bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group">
+                                <div
+                                    class="w-14 h-14 rounded-full bg-navy-50 text-gold-600 flex items-center justify-center shrink-0 mr-4 group-hover:bg-gold-50 transition-colors">
+                                    <i class="ph-fill ph-map-pin text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-navy-900 font-bold font-heading text-lg mb-1">Kantor Pusat</h4>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Jl. Kebayoran Lama No. 99, Gedung
+                                        Perkantoran Melati Lt 2, Jakarta Selatan, DKI Jakarta 12210</p>
+                                </div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div
+                                class="flex items-start bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group">
+                                <div
+                                    class="w-14 h-14 rounded-full bg-navy-50 text-gold-600 flex items-center justify-center shrink-0 mr-4 group-hover:bg-gold-50 transition-colors">
+                                    <i class="ph-fill ph-phone-call text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-navy-900 font-bold font-heading text-lg mb-1">Telepon (24 Jam)</h4>
+                                    <p class="text-gray-600 text-sm leading-relaxed mb-1">Hunting: (021) 555-0198</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Direct/WhatsApp: +62 812-3456-7890
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div
+                                class="flex items-start bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group">
+                                <div
+                                    class="w-14 h-14 rounded-full bg-navy-50 text-gold-600 flex items-center justify-center shrink-0 mr-4 group-hover:bg-gold-50 transition-colors">
+                                    <i class="ph-fill ph-envelope-simple-open text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-navy-900 font-bold font-heading text-lg mb-1">Email Resmi</h4>
+                                    <p class="text-gray-600 text-sm leading-relaxed mb-1">Konsultasi:
+                                        info@gadinggardatama.co.id</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Karir: hrd@gadinggardatama.co.id
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Operating Hours -->
+                            <div
+                                class="flex items-start bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group">
+                                <div
+                                    class="w-14 h-14 rounded-full bg-navy-50 text-gold-600 flex items-center justify-center shrink-0 mr-4 group-hover:bg-gold-50 transition-colors">
+                                    <i class="ph-fill ph-clock text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-navy-900 font-bold font-heading text-lg mb-1">Jam Operasional Kantor
+                                    </h4>
+                                    <p class="text-gray-600 text-sm leading-relaxed font-medium">Senin - Jumat: 08:00 -
+                                        17:00 WIB</p>
+                                    <p class="text-gray-500 text-xs mt-1">*Layanan operasional lapangan tetap berjalan
+                                        24/7</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="lg:col-span-7 mt-8 lg:mt-0">
+                        <div
+                            class="bg-white rounded-3xl p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100">
+                            <h3 class="text-2xl font-bold text-navy-900 font-heading mb-2">Kirim Pesan Langsung</h3>
+                            <p class="text-gray-500 text-sm mb-8">Isi formulir di bawah ini dengan lengkap, tim kami
+                                akan merespons dalam waktu 1x24 jam kerja.</p>
+
+                            <form action="#" class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="first_name"
+                                            class="block mb-2 text-sm font-medium text-navy-900">Nama Depan <span
+                                                class="text-red-500">*</span></label>
+                                        <input type="text" id="first_name"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-gold-500 focus:border-gold-500 block w-full p-3.5 transition-colors"
+                                            placeholder="Budi" required>
+                                    </div>
+                                    <div>
+                                        <label for="last_name" class="block mb-2 text-sm font-medium text-navy-900">Nama
+                                            Belakang</label>
+                                        <input type="text" id="last_name"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-gold-500 focus:border-gold-500 block w-full p-3.5 transition-colors"
+                                            placeholder="Santoso">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="company" class="block mb-2 text-sm font-medium text-navy-900">Nama
+                                            Perusahaan / Instansi</label>
+                                        <input type="text" id="company"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-gold-500 focus:border-gold-500 block w-full p-3.5 transition-colors"
+                                            placeholder="PT... atau CV...">
+                                    </div>
+                                    <div>
+                                        <label for="phone" class="block mb-2 text-sm font-medium text-navy-900">Nomor
+                                            Telepon / WA <span class="text-red-500">*</span></label>
+                                        <input type="tel" id="phone"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-gold-500 focus:border-gold-500 block w-full p-3.5 transition-colors"
+                                            placeholder="0812..." required>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="email" class="block mb-2 text-sm font-medium text-navy-900">Alamat Email
+                                        <span class="text-red-500">*</span></label>
+                                    <input type="email" id="email"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-gold-500 focus:border-gold-500 block w-full p-3.5 transition-colors"
+                                        placeholder="email@perusahaan.com" required>
+                                </div>
+
+                                <div>
+                                    <label for="service_interest"
+                                        class="block mb-2 text-sm font-medium text-navy-900">Layanan yang
+                                        Diminati</label>
+                                    <select id="service_interest"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-gold-500 focus:border-gold-500 block w-full p-3.5 transition-colors">
+                                        <option value="" selected disabled>Pilih layanan...</option>
+                                        <option value="guarding">Penyediaan Tenaga Keamanan (Satpam)</option>
+                                        <option value="equipment">Peralatan Keamanan (CCTV/Alarm)</option>
+                                        <option value="vital">Security Objek Vital</option>
+                                        <option value="factory">Security Pabrik</option>
+                                        <option value="other">Konsultasi / Lainnya</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="message" class="block mb-2 text-sm font-medium text-navy-900">Pesan /
+                                        Detail Kebutuhan <span class="text-red-500">*</span></label>
+                                    <textarea id="message" rows="5"
+                                        class="block p-3.5 w-full text-sm text-gray-900 bg-gray-50 rounded-xl border border-gray-300 focus:ring-gold-500 focus:border-gold-500 transition-colors"
+                                        placeholder="Deskripsikan secara singkat kebutuhan keamanan Anda atau lokasi yang ingin diamankan..."
+                                        required></textarea>
+                                </div>
+
+                                <button type="submit"
+                                    class="w-full text-navy-900 bg-gold-500 hover:bg-gold-600 focus:ring-4 focus:outline-none focus:ring-gold-400 font-bold rounded-xl text-base px-6 py-4 text-center transition-all hover:-translate-y-1 shadow-lg shadow-gold-500/30 flex justify-center items-center">
+                                    <i class="ph-bold ph-paper-plane-tilt mr-2 text-xl"></i> Kirim Pesan Sekarang
+                                </button>
+                                <p class="text-xs text-gray-500 text-center mt-4">Dengan mengirimkan pesan, Anda setuju
+                                    pihak PT Gading Gardatama Perkasa untuk menghubungi Anda kembali.</p>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Maps Section -->
+        <section class="w-full bg-white h-[450px] relative border-t border-b border-gray-200">
+            <!-- Embedding Google Maps using iframe -->
+            <!-- Note: Using Monas coordinates as a placeholder for Jakarta -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126934.33230303666!2d106.75549065!3d-6.170668049999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x100c5e82dd4b820!2sJakarta%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="grayscale hover:grayscale-0 transition-all duration-700">
+            </iframe>
+
+            <div
+                class="absolute bottom-8 left-1/2 -translate-x-1/2 bg-navy-900 text-white px-6 py-3 rounded-full font-semibold shadow-2xl border border-navy-700 font-heading flex items-center shadow-navy-900/50">
+                <i class="ph-fill ph-navigation-arrow text-gold-500 mr-2 text-xl"></i> Temukan Kami di Jakarta
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 pt-16 pb-8 mt-auto">
+        <div class="max-w-screen-xl px-4 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Col 1 -->
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="flex items-center space-x-3 mb-6 group">
+                        <img src="assets/logo.jpeg" alt="Logo Gading Gardatama"
+                            class="w-12 h-12 rounded-full object-cover border-2 border-gold-500/50 group-hover:scale-110 transition-transform shadow-lg shadow-gold-500/20">
+                        <span class="text-lg font-bold text-white font-heading">PT. GADING GARDATAMA PERKASA</span>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        Perusahaan jasa pengamanan terdepan yang berkomitmen menjaga aset berharga, karyawan, dan klien
+                        Anda dengan sepenuh hati dan dedikasi 24 jam sehari.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="text-gray-400 hover:text-white transition-colors bg-navy-800 p-2 rounded-full"><i
+                                class="ph-fill ph-facebook-logo text-xl"></i></a>
+                        <a href="#"
+                            class="text-gray-400 hover:text-white transition-colors bg-navy-800 p-2 rounded-full"><i
+                                class="ph-fill ph-instagram-logo text-xl"></i></a>
+                        <a href="#"
+                            class="text-gray-400 hover:text-white transition-colors bg-navy-800 p-2 rounded-full"><i
+                                class="ph-fill ph-linkedin-logo text-xl"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 font-heading uppercase tracking-wider text-sm">Tautan Cepat
+                    </h4>
+                    <ul class="text-gray-400 text-sm space-y-4">
+                        <li><a href="index.html" class="hover:text-gold-500 transition-colors">Beranda</a></li>
+                        <li><a href="tentang.html" class="hover:text-gold-500 transition-colors">Tentang Kami</a></li>
+                        <li><a href="layanan.html" class="hover:text-gold-500 transition-colors">Layanan Keamanan</a>
+                        </li>
+                        <li><a href="index.html#faq" class="hover:text-gold-500 transition-colors">FAQ & Bantuan</a>
+                        </li>
+                        <li><a href="#" class="hover:text-gold-500 transition-colors">Karir Satpam</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 font-heading uppercase tracking-wider text-sm">Layanan Utama
+                    </h4>
+                    <ul class="text-gray-400 text-sm space-y-4">
+                        <li><a href="layanan.html" class="hover:text-gold-500 transition-colors">Penjagaan Fisik
+                                Satpam</a></li>
+                        <li><a href="layanan.html" class="hover:text-gold-500 transition-colors">Patroli Keamanan
+                                Area</a></li>
+                        <li><a href="layanan.html" class="hover:text-gold-500 transition-colors">Instalasi Kamera CCTV &
+                                Akses</a></li>
+                        <li><a href="layanan.html" class="hover:text-gold-500 transition-colors">Investigasi Internal
+                                Bisnis</a></li>
+                        <li><a href="layanan.html" class="hover:text-gold-500 transition-colors">Pengawalan Uang
+                                (CIT)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 font-heading uppercase tracking-wider text-sm">Kontak Darurat
+                    </h4>
+                    <ul class="text-gray-400 text-sm space-y-5">
+                        <li class="flex items-start">
+                            <i class="ph-fill ph-map-pin text-gold-500 text-xl mt-0.5 mr-3 shrink-0"></i>
+                            <span class="leading-relaxed">Jl. Kebayoran Lama No. 99, Gedung Perkantoran Melati Lt 2,
+                                Jakarta Selatan, 12210</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ph-fill ph-phone text-gold-500 text-xl mr-3 shrink-0"></i>
+                            <span>(021) 555-0198 (24 Jam)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ph-fill ph-envelope-simple text-gold-500 text-xl mr-3 shrink-0"></i>
+                            <span>info@gadinggardatama.co.id</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-navy-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; <span id="year"></span> PT. Gading Gardatama Perkasa. All Rights Reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Kebijakan Privasi</a>
+                    <a href="#" class="hover:text-white transition-colors">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281234567890" target="_blank"
+        class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_10px_rgba(0,0,0,0.3)] hover:scale-110 transition-transform wa-pulse group"
+        aria-label="Chat via WhatsApp">
+        <i class="ph-fill ph-whatsapp-logo"></i>
+        <!-- Tooltip -->
+        <span
+            class="absolute -top-12 right-0 bg-navy-900 text-white text-xs font-bold px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-lg">
+            Hubungi Kami Sekarang!
+        </span>
+    </a>
+
+    <!-- Flowbite JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script>
+        // Update copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Add scroll logic for navbar background
+        const navbar = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('bg-navy-900', 'shadow-xl');
+                navbar.classList.remove('bg-navy-800');
+            } else {
+                navbar.classList.remove('bg-navy-900', 'shadow-xl');
+                navbar.classList.add('bg-navy-800');
+            }
+        });
+    </script>
+</body>
+
+</html>
