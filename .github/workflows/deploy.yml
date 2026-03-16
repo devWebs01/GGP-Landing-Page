@@ -19,4 +19,4 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: ./home/gadingga/public_html/GGP-Landing-Page/  # Ganti dengan path folder di hosting Anda jika perlu (misal: ./public_html/)
+        server-dir: ./home/gadingga/public_html/ggp_landing_page/  # Ganti dengan path folder di hosting Anda jika perlu (misal: ./public_html/)
