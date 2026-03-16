@@ -1,0 +1,22 @@
+name: Deploy Website to Shared Hosting
+
+on:
+  push:
+    branches:
+      - main  # Ganti dengan nama branch utama Anda jika bukan main
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: ./home/gadingga/public_html/GGP-Landing-Page  # Ganti dengan path folder di hosting Anda jika perlu (misal: ./public_html/)
